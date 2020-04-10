@@ -2,8 +2,8 @@
 
 @section('content')
     @foreach($favoriteProducts as  $favoriteProduct)
-        <table class="table table-bordered">
-            <thead class="thead-dark">
+        <table>
+            <thead>
             <tr>
                 <th>id</th>
                 <th>name</th>

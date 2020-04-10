@@ -1,4 +1,4 @@
-homePage = {
+    homePage = {
     init: function () {
         $(".add-to-basket").click(function (el) {
             productId = $(this).attr('product-id')

@@ -23,6 +23,18 @@ Route::post('/product/like', 'FavoriteController@like')->name('product_like')->m
 Route::post('/product/unlike', 'FavoriteController@unLike')->name('product_unLike')->middleware('auth');
 Route::get('/favoriteProducts/my-favorites', 'FavoriteController@myFavorites')->name('my_favorites')->middleware('auth');
 Route::get('/favoriteProducts/favorites', 'FavoriteController@favorites')->name('favorites')->middleware('auth');
+Route::get('/product/index/{page?}', 'ProductController@index')->middleware('auth');
+Route::get('/product/new', 'ProductController@newProduct')->middleware('auth');
+Route::post('/product/create', 'ProductController@create')->middleware('auth');
+Route::get('/product/delete/{id}', 'ProductController@delete')->middleware('auth');
+Route::get('/product/edit/{id}', 'ProductController@edit')->middleware('auth');
+Route::post('/product/update/{id}', 'ProductController@update')->middleware('auth');
+
+
+
+
+
+
 
 
 Auth::routes();
